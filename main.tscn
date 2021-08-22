@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[node name="base" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="outContainer" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -39.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="out" type="Panel" parent="outContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 554.0
+
+[node name="text" type="RichTextLabel" parent="outContainer/out"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+bbcode_enabled = true
+scroll_active = false
+scroll_following = true
+selection_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="inContainer" type="PanelContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -42.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="in" type="Panel" parent="inContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 35.0
+
+[node name="line" type="LineEdit" parent="inContainer/in"]
+margin_right = 1010.0
+margin_bottom = 28.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="_consoleTree" type="Node" parent="."]
