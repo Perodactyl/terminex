@@ -6,6 +6,7 @@ onready var consoleEl:Control = $"/root/base"
 onready var inNode:LineEdit = consoleEl.get_node("inContainer/in/line")
 onready var out:RichTextLabel = consoleEl.get_node("outContainer/out/text")
 var debug = true
+var loadedMods = []
 
 func _ready():
 	Godir.write_file("user://mods/baseGame.gd", Godir.read_file("res://baseGame.gd"))
@@ -20,6 +21,7 @@ func _ready():
 					mod.install()
 					console.log("installed mod: "+mod.displayName())
 				mod.load()
+				loadedMods.append(mod)
 			elif file.ends_with(".data"):
 				pass
 			else:

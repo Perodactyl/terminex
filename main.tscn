@@ -27,7 +27,7 @@ margin_bottom = 554.0
 [node name="text" type="RichTextLabel" parent="outContainer/out"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-focus_mode = 2
+focus_mode = 1
 bbcode_enabled = true
 scroll_active = false
 scroll_following = true
