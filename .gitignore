@@ -1,2 +1,4 @@
 .import/*
 *.import
+terminex-compile.*
+terminex-compile-html.*
