@@ -52,16 +52,11 @@ func glitch_err(phaze:int=0):
 			Utils.delay(0.1, self, "glitch_err", [4])
 		4:
 			datastore.gameStarted = true
-			datastore.corrupt = false
 			save()
 			Utils.tree().quit()
 
-func set_corrupt(val):
-	datastore.corrupt = val
-
 func install():
 	datastore.corrupt = false
-	call_deferred("set_corrupt", true)
 	datastore.gameEnded = false
 	datastore.usedMod = false
 	datastore.startups = 0
@@ -126,6 +121,8 @@ func line(data:Dictionary):
 				elif !datastore.gameEnded:
 					console.log("\"help\" Failed to execute because system tampering was detected.")
 			"exit":
+				if !datastore.gameStarted:
+					datastore.corrupt = true
 				save()
 				Utils.tree().quit()
 			"mod":
@@ -144,4 +141,5 @@ func showMoreGibberish():
 		Utils.delay(2, self, "exit")
 
 func exit():
+	save()
 	Utils.tree().quit()
