@@ -138,8 +138,9 @@ func showMoreGibberish():
 	console.out.percent_visible += 0.01
 	if console.out.percent_visible == 1:
 		uninstall()
-		Utils.delay(2, self, "exit")
+		Utils.delay(2, self, "exit", [false])
 
-func exit():
-	save()
+func exit(doSave):
+	if doSave:
+		save()
 	Utils.tree().quit()
