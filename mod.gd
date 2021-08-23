@@ -40,3 +40,6 @@ func allow_cmds():
 		return h.keys()
 	else:
 		return []
+
+func uninstall():
+	Godir.dir.remove("user://mods/"+fileName()+".data")

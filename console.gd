@@ -18,8 +18,8 @@ func _ready():
 				var mod = Node.new()
 				mod.set_script(script)
 				if !Godir.dir.file_exists("user://mods/"+mod.fileName()+".data"):
-					mod.install()
-					console.log("installed mod: "+mod.displayName())
+					if mod.install():
+						console.log("Installed mod: "+mod.displayName())
 				mod.load()
 				loadedMods.append(mod)
 			elif file.ends_with(".data"):

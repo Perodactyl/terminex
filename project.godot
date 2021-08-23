@@ -29,6 +29,7 @@ config/icon="res://icon.png"
 console="*res://console.gd"
 Godir="*res://godir.gd"
 Data="*res://dataStore.gd"
+Utils="*res://Utils.gd"
 
 [debug]
 
